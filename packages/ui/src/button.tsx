@@ -11,9 +11,9 @@ export function Button({ variant = "primary", ...props }: Props) {
   return (
     <button
       {...props}
-      className={clsx("ui-px-4 ui-py-2 ui-rounded-md ui-text-white", {
-        "ui-bg-[#2196f3] ": variant === "primary",
-        "ui-bg-[#607d8b]": variant === "secondary",
+      className={clsx("px-4 py-2 rounded-md text-white", {
+        "bg-[#2196f3] ": variant === "primary",
+        "bg-[#607d8b]": variant === "secondary",
       })}
     >
       Button
