@@ -1,4 +1,4 @@
-import React, { ComponentProps } from "react";
+import React, { Children, ComponentProps } from "react";
 import clsx from "clsx";
 
 type buttonProps = ComponentProps<"button">;
@@ -7,7 +7,7 @@ export interface Props extends buttonProps {
   variant?: "primary" | "secondary";
 }
 
-export function Button({ variant = "primary", ...props }: Props) {
+export function Button({ variant = "primary", children, ...props }: Props) {
   return (
     <button
       {...props}
@@ -16,7 +16,7 @@ export function Button({ variant = "primary", ...props }: Props) {
         "bg-[#607d8b]": variant === "secondary",
       })}
     >
-      Button
+      {children}
     </button>
   );
 }
